@@ -67,6 +67,7 @@ class GUI extends TopLevel implements Observer {
     String readKey() {
         try {
             return _pendingKeys.take();
+
         } catch (InterruptedException excp) {
             throw new Error("unexpected interrupt");
         }
